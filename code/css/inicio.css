@@ -1,0 +1,578 @@
+/********** General ************/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --purple: #b535f6;
+}
+
+body {
+    font-family: "m";
+}
+
+button {
+    border: none;
+    cursor: pointer;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+/************ Header *************/
+header {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    background-color: white;
+    height: 100px;
+    padding: 0 20px;
+    align-items: center;
+    box-shadow: 0px 1px 4px 0px rgb(0 0 0 / 9%);
+    font-size: 16.5px;
+    position: fixed;
+    z-index: 3;
+    top: 0;
+    left: 0;
+}
+
+header a {
+    color: black;
+}
+
+header .logo {
+    height: 90px;
+    width: 220px;
+}
+
+header nav > div {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+header hr {
+    border: none;
+    height: 25px;
+    width: 1px;
+    background-color: gray;
+}
+
+header nav, header ul{
+    display: flex;
+    gap: 32px;
+    align-items: center;
+}
+
+header nav > a {
+    padding: 10px 20px;
+    background-color: red;
+    border-radius: 5px;
+    color: white;
+    border: 1px solid red;
+    transition: all .5s;
+}
+
+header nav > a:hover {
+    background-color: white;
+    color: red;
+}
+
+header nav a.active, header nav ul a:hover, header nav div a:hover {
+    color: orange;
+}
+
+/********** Menu **********/
+header > button , header > a.person{
+    background-color: transparent;
+    display: none;
+}
+
+header > button img, header > a img{
+    width: 30px;
+    height: 30px;
+}
+
+header .menu {
+    position: absolute;
+    width: 80%;
+    top: 0;
+    left: 0;
+    background-color: rgb(240, 239, 239);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transform: translateX(-100%);
+    transition: transform .6s;
+    z-index: -1;
+}
+
+header .menu.active {
+    transform: none;
+}
+
+header .menu ul {
+    flex-direction: column;
+    gap: 0;
+}
+
+header .menu > div {
+    position: relative;
+}
+
+header .menu img {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+header .menu li {
+    width: 100%;
+}
+
+header .menu ul a.active, header .menu ul a:hover {
+    color: orange;
+}
+
+header .menu h2 {
+    background-color: white;
+    text-align: center;
+}
+
+header .menu li a, header .menu h2{
+    padding: 20px 10px;
+    display: block;
+    border-bottom: 1px solid gray;
+    font-weight: bold;
+}
+
+header .menu button {
+    background-color: red;
+    color: white;
+    padding: 20px 0;
+    border-radius: 10px;
+    width: calc(100% - 20px);
+    margin: 10px;
+    font-size: 16px;
+}
+
+/*********** Options ***********/
+.options {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 100px;
+    background-color: rgb(236, 234, 234);
+    padding: 20px;
+}
+
+.options input, .options select{
+    height: 50px;
+    padding: 0 15px;
+    border: 1px solid gray;
+    outline: none;
+    text-overflow: ellipsis;
+}
+
+.options button {
+    padding: 10px 40px;
+    font-size: 16px;
+    color: white;
+    background-color: red;
+    border-radius: 10px;
+}
+
+/********** Casas ***********/
+.casas .slider {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.casas .sliderMove {
+    display: flex;
+    width: 500%;
+    height: 100%;
+    transition: transform .6s;
+}
+
+.casas .sliderMove .box {
+    width: 20%;
+    background-image: url("../../rg/img/proyecto-manuel-bonilla-635x550.jpg");
+    height: 100%;
+    background-size: contain;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.casas .box .text {
+    padding: 40px 90px;
+    background-color: rgba(0,0,0, .6);
+    color: white;
+    text-align: center;
+}
+
+.casas .text h2 {
+    font-size: 42px;
+    margin: 20px 0;
+    margin-bottom: 15px;
+}
+
+.casas .text h3 {
+    font-size: 30px;
+}
+
+.casas .text span {
+    font-size: 22px;
+}
+
+.casas .text a {
+    border: 2px solid white;
+    padding: 15px 40px;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 20px;
+    display: block;
+    width: fit-content;
+    margin: 0 auto;
+    margin-top: 30px;
+    transition: all .5s;
+}
+
+.casas .text a:hover {
+    border-color: red;
+    background-color: red;
+}
+
+.casas button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 80px;
+    background-color: transparent;
+    border: 2px solid white;
+    padding: 0 10px;
+}
+
+.casas button img {
+    filter: invert(100%);
+    width: 30px;
+    height: 30px;
+}
+
+.casas .left {
+    left: 20px;
+    display: none;
+}
+
+.casas .right {
+    right: 20px;
+}
+
+/*********** Proyectos *************/
+.proyectos {
+    width: 100%;
+    text-align: center;
+    padding: 40px 20px;
+    background-color: rgb(235, 230, 230);
+}
+
+.proyectos .title {
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    margin: 0 90px;
+    margin-bottom: 40px;
+    padding: 15px 10px;
+}
+
+.proyectos .title a {
+    padding: 10px 20px;
+    background-color: rgb(9, 9, 134);
+}
+
+.proyectos .box-flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.proyectos .box-flex > div {
+    width: 350px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 8px;
+}
+
+.proyectos .box-flex img {
+    width: 100%;
+    height: 290px;
+}
+
+.proyectos .detail {
+    background-color: rgb(28, 75, 202);
+    padding: 10px;
+    color: white;
+    font-weight: bold;
+}
+
+.proyectos .detail.second {
+    background-color: rgb(0, 184, 0);
+}
+
+.proyectos .text {
+    text-align: start;
+    margin: 20px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/*********** Ventas *************/
+.ventas {
+    width: 100%;
+    text-align: center;
+    padding: 40px 20px;
+    background-color: rgb(235, 230, 230);
+}
+
+.ventas .title {
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    margin: 0 90px;
+    margin-bottom: 40px;
+    padding: 15px 10px;
+}
+
+.ventas .title a {
+    padding: 10px 20px;
+    background-color: rgb(9, 9, 134);
+}
+
+.ventas .slider {
+    position: relative;
+    width: 85%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.ventas .sliderMove {
+    display: flex;
+    width: calc(200% + (200%/3));
+    gap: 20px;
+    justify-content: center;
+    transition: transform .6s;
+}
+
+.ventas .box {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 8px;
+    width: calc((100%/8) - 20px);
+}
+
+.ventas .box img {
+    width: 100%;
+    height: 290px;
+}
+
+.ventas .detail {
+    background-color: rgb(28, 75, 202);
+    padding: 10px;
+    color: white;
+    font-weight: bold;
+}
+
+.ventas .detail.second {
+    background-color: rgb(0, 184, 0);
+}
+
+.ventas .text {
+    text-align: start;
+    margin: 20px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.ventas button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 50%;
+    padding: 10px;
+}
+
+.ventas .left {
+    left: 0;
+    display: none;
+}
+
+.ventas .right {
+    right: 0;
+}
+
+/************** Noticias ***************/
+.noticias {
+    width: 80%;
+    padding: 40px 0;
+    margin: 0 auto;
+}
+
+.noticias .box-flex {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.noticias > h2 {
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+
+.noticias .box-flex > div {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid rgb(202, 197, 197);
+}
+
+.noticias .box-flex img {
+    width: 100%;
+}
+
+.noticias .box-flex > div > span {
+    color: red;
+    margin: 10px 0;
+    display: block;
+}
+
+.noticias .box-flex h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.noticias .fecha {
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid rgb(202, 197, 197);
+    padding: 15px 0;
+}
+
+/********* Footer **********/
+footer {
+    width: 100%;
+    background-color: rgb(28, 28, 207);
+    color: white;
+    padding: 50px 80px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+footer > div {
+    width: fit-content;
+}
+
+footer p {
+    width: 300px;
+}
+
+footer .redes {
+    display: flex;
+    gap: 20px;
+}
+
+footer h3 {
+    margin-bottom: 20px;
+}
+
+footer .opt {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+footer .opt li {
+    transition: margin-left .5s;
+}
+
+footer .opt li:hover {
+    margin-left: 10px;
+}
+
+footer .redes img {
+    filter: invert(100%);
+}
+
+footer .redes ~ span {
+    margin: 20px 0;
+    display: block;
+    font-size: 18px;
+}
+
+footer > div > div {
+    align-items: center;
+    display: flex;
+    gap: 10px;
+}
+
+footer input {
+    height: 40px;
+    padding: 0 10px;
+}
+
+footer button {
+    height: 40px;
+    padding: 10px;
+}
+
+/********* Media Querys **********/
+@media (max-width: 1250px) {
+    /********** Header **********/
+    header nav {
+        display: none;
+    }
+
+    header .logo {
+        width: 220px;
+    }
+
+    header .menu {
+        z-index: 3;
+    }
+
+    header > button, header > a.person{
+        display: block;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        height: 80px;
+    }
+
+    header .logo {
+        width: 180px;
+        height: 60px;
+    }
+}
