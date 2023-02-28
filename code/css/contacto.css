@@ -324,315 +324,111 @@ header .menu button {
     font-weight: bold;
 }
 
-/*********** Options ***********/
-.options {
-    display: flex;
-    width: 100%;
-    justify-content: center;
-    gap: 20px;
+/******** Content *********/
+.content {
     margin-top: 100px;
-    background-color: rgb(236, 234, 234);
-    padding: 20px;
-}
-
-.options input, .options select{
-    height: 50px;
-    padding: 0 15px;
-    border: 1px solid gray;
-    outline: none;
-    text-overflow: ellipsis;
-}
-
-.options button {
-    padding: 10px 40px;
-    font-size: 16px;
-    color: white;
-    background-color: red;
-    border-radius: 10px;
-}
-
-/********** Casas ***********/
-.casas .slider {
+    padding: 40px 0;
+    padding-bottom: 70px;
     width: 100%;
-    height: 100vh;
-    position: relative;
-    overflow: hidden;
+    background-color: rgb(243, 242, 242);
 }
 
-.casas .sliderMove {
-    display: flex;
-    width: 500%;
-    height: 100%;
-    transition: transform .6s;
-}
-
-.casas .sliderMove .box {
-    width: 20%;
-    background-image: url("../../rg/img/proyecto-manuel-bonilla-635x550.jpg");
-    height: 100%;
-    background-size: contain;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.casas .box .text {
-    padding: 40px 90px;
-    background-color: rgba(0,0,0, .6);
-    color: white;
-    text-align: center;
-}
-
-.casas .text h2 {
-    font-size: 42px;
-    margin: 20px 0;
-    margin-bottom: 15px;
-}
-
-.casas .text h3 {
+.content h1 {
+    width: 85%;
+    margin: 0 auto;
     font-size: 30px;
 }
 
-.casas .text span {
+.content > iframe {
+    width: 100%;
+    height: 400px;
+    margin-top: 40px;
+}
+
+.contacto {
+    width: 85%;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+
+.contacto h2 {
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 40px;
+}
+
+.contacto h3 {
     font-size: 22px;
 }
 
-.casas .text a {
-    border: 2px solid white;
-    padding: 15px 40px;
-    border-radius: 8px;
-    font-weight: bold;
-    font-size: 20px;
-    display: block;
-    width: fit-content;
-    margin: 0 auto;
-    margin-top: 30px;
-    transition: all .5s;
-}
-
-.casas .text a:hover {
-    border-color: red;
-    background-color: red;
-}
-
-.casas button {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    height: 80px;
-    background-color: rgba(255,255,255,.4);
-    backdrop-filter: blur(6px);
-    border: 2px solid white;
-    padding: 0 10px;
-}
-
-.casas button img {
-    filter: invert(100%);
-    width: 30px;
-    height: 30px;
-}
-
-.casas .left {
-    left: 20px;
-    display: none;
-}
-
-.casas .right {
-    right: 20px;
-}
-
-/*********** Proyectos *************/
-.proyectos {
-    width: 100%;
-    text-align: center;
-    padding: 40px 20px;
-    background-color: rgb(235, 230, 230);
-}
-
-.proyectos .title {
+.contacto > div {
     display: flex;
-    justify-content: space-between;
-    background-color: white;
-    margin: 0 90px;
-    margin-bottom: 40px;
-    padding: 15px 10px;
 }
 
-.proyectos .title a {
-    padding: 10px 20px;
-    background-color: rgb(9, 9, 134);
-}
-
-.proyectos .box-flex {
+.contacto .info {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    flex-direction: column;
     gap: 30px;
-}
-
-.proyectos .box-flex > div {
-    width: 350px;
-    background-color: white;
-    display: flex;
-    flex-direction: column;
-    padding: 8px;
-}
-
-.proyectos .box-flex img {
-    width: 100%;
-    height: 290px;
-}
-
-.proyectos .detail {
-    background-color: rgb(28, 75, 202);
-    padding: 10px;
+    background-color: rgb(245, 73, 73);
     color: white;
-    font-weight: bold;
+    padding: 30px;
+    width: 40%;
 }
 
-.proyectos .detail.second {
-    background-color: rgb(0, 184, 0);
-}
-
-.proyectos .text {
-    text-align: start;
-    margin: 20px 0;
+.contacto .info ul {
     display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-/*********** Ventas *************/
-.ventas {
-    width: 100%;
-    text-align: center;
-    padding: 40px 20px;
-    background-color: rgb(235, 230, 230);
-}
-
-.ventas .title {
-    display: flex;
-    justify-content: space-between;
-    background-color: white;
-    margin: 0 90px;
-    margin-bottom: 40px;
-    padding: 15px 10px;
-}
-
-.ventas .title a {
-    padding: 10px 20px;
-    background-color: rgb(9, 9, 134);
-}
-
-.ventas .slider {
-    position: relative;
-    width: 85%;
-    margin: 0 auto;
-    overflow: hidden;
-}
-
-.ventas .sliderMove {
-    display: flex;
-    width: calc(200% + (200%/3));
     gap: 20px;
-    justify-content: center;
-    transition: transform .6s;
+}
+.contacto .info ul img {
+    filter: invert(100%);
 }
 
-.ventas .box {
-    background-color: white;
-    display: flex;
-    flex-direction: column;
-    padding: 8px;
-    width: calc((100%/8) - 20px);
-}
-
-.ventas .box img {
-    width: 100%;
-    height: 290px;
-}
-
-.ventas .detail {
-    background-color: rgb(28, 75, 202);
-    padding: 10px;
-    color: white;
-    font-weight: bold;
-}
-
-.ventas .detail.second {
-    background-color: rgb(0, 184, 0);
-}
-
-.ventas .text {
-    text-align: start;
-    margin: 20px 0;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-.ventas button {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    border-radius: 50%;
-    padding: 10px;
-}
-
-.ventas .left {
-    left: 0;
-    display: none;
-}
-
-.ventas .right {
-    right: 0;
-}
-
-/************** Noticias ***************/
-.noticias {
-    width: 80%;
-    padding: 40px 0;
-    margin: 0 auto;
-}
-
-.noticias .box-flex {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 30px;
-}
-
-.noticias > h2 {
-    font-size: 30px;
-    margin-bottom: 30px;
-}
-
-.noticias .box-flex > div {
+.formulario {
+    padding: 30px;
     flex: 1;
-    padding: 8px;
-    border: 1px solid rgb(202, 197, 197);
+    background-color: white;
 }
 
-.noticias .box-flex img {
-    width: 100%;
-}
-
-.noticias .box-flex > div > span {
-    color: red;
-    margin: 10px 0;
-    display: block;
-}
-
-.noticias .box-flex h2 {
-    font-size: 20px;
-    margin-bottom: 10px;
-}
-
-.noticias .fecha {
+.formulario form {
     display: flex;
-    justify-content: space-between;
-    border-top: 1px solid rgb(202, 197, 197);
-    padding: 15px 0;
+    flex-direction: column;
+    margin-top: 30px;
+    gap: 20px;
+}
+
+.formulario input {
+    height: 45px;
+    border: 1px solid rgb(194, 191, 191);
+    padding: 0 10px;
+    outline: none;
+}
+
+.formulario textarea {
+    border: 1px solid rgb(194, 191, 191);
+    padding: 10px;
+    outline: none;
+}
+
+.formulario iframe {
+    align-self: center;
+}
+
+.formulario button {
+    width: fit-content;
+    padding: 18px 40px;
+    align-self: center;
+    color: white;
+    font-size: 16px;
+    background-color: rgb(245, 73, 73);
+}
+
+.formulario form div {
+    display: flex;
+    gap: 20px;
+}
+
+.formulario form input {
+    flex: 1;
 }
 
 /********* Footer **********/

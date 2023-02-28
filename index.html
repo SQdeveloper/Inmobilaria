@@ -23,6 +23,55 @@
     <link rel="stylesheet" href="./code/css/inicio.css" />
 </head>
 <body>
+    <div class="ingresar">
+        <div class="card">
+            <div>
+                <h2>Ingresar</h2>
+                <button><img src="./rg/svg/x (2).svg" alt="x"></button>
+            </div>
+            <form action="">
+                <input type="text" placeholder="Nombre de usuario">
+                <input type="text" placeholder="Ingresa tu clave">
+                <div class="st">
+                    <div>
+                        <input type="checkbox">
+                        <span>Seguir conectado</span>
+                    </div>
+                    <a href="">¿Se te olvidó la clave?</a>
+                </div>
+                <button type="submit">Ingresa a tu cuenta</button>
+            </form>
+            <div class="foot">
+                <span>¿Aún no tienes una cuenta?</span>
+                <a href="">Registrate</a>
+            </div>
+        </div>
+    </div>
+    <div class="registrar">
+        <div class="card">
+            <div>
+                <h2>Ingresar</h2>
+                <button><img src="./rg/svg/x (2).svg" alt="x"></button>
+            </div>
+            <form action="">
+                <input type="text" placeholder="Nombre de Usuario">
+                <input type="text" placeholder="Correo">
+                <input type="text" placeholder="Clave">
+                <input type="text" placeholder="Re-ingresar ">
+                <input type="text" placeholder="Seleccionar rol">
+                <iframe title="reCAPTCHA" src="https://www.google.com/recaptcha/api2/anchor?ar=1&amp;k=6LfG1PUUAAAAANCK6bn15Uswx9DkRhNrtknrGTzT&amp;co=aHR0cHM6Ly93d3cubGFpbm1vYmlsaWFyaWEucGU6NDQz&amp;hl=es&amp;v=Nh10qRQB5k2ucc5SCBLAQ4nA&amp;size=normal&amp;cb=pzpday6dxqv5" width="304" height="78" role="presentation" name="a-pfarbeahezyt" frameborder="0" scrolling="no" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox"></iframe>
+                <div class="st">
+                    <input type="checkbox">
+                    <span>He leído y acepto los Términos y Condiciones</span>
+                </div>
+                <button type="submit">Registrate</button>
+                <div class="foot">
+                    <span>¿Ya tienes una cuenta?</span>
+                    <a href="">Ingresa a tu cuenta</a>
+                </div>
+            </form>
+        </div>
+    </div>
     <header>
             <div class="menu">
                 <div>
@@ -55,9 +104,9 @@
             <div>
                 <hr>
                 <img src="./rg/svg/person-fill.svg" alt="login">
-                <a href="">Ingresa a tu cuenta</a>
+                <a class="en-ingresar" href="#">Ingresa a tu cuenta</a>
                 <span>/</span>
-                <a href="">Regístrate</a>
+                <a class="en-registrar" href="#">Regístrate</a>
             </div>
             <a href="">Publicar</a>
         </nav>
@@ -348,4 +397,6 @@
 <script src="./code/scripts/header.js"></script>
 <script src="./code/scripts/sliderCasas.js"></script>
 <script src="./code/scripts/sliderVentas.js"></script>
+<script src="./code/scripts/ingresar.js"></script>
+<script src="./code/scripts/registrar.js"></script>
 </html>
