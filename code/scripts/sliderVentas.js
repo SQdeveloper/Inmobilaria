@@ -23,3 +23,10 @@ arrows[1].addEventListener("click", ()=>{
 function moveV() {
     sliderMoveV.style.transform = `translateX(-${100/8*value}%)`
 }
+if(window.innerWidth <= 1000) {
+    limitSupV = 7;
+}
+
+else if(window.innerWidth <= 1000) {
+    limitSupV = 6;
+}

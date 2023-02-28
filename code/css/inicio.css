@@ -723,7 +723,113 @@ footer button {
     }
 }
 
+@media (max-width: 1000px) {
+    /*********** Casas **********/
+    .casas .sliderMove .box {
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .casas .slider {
+        height: 70vh;
+    }
+
+    /********** Proyectos ***********/
+    .proyectos .box-flex img {
+        height: 240px;
+    }
+
+    /******** Ventas **********/
+    .ventas .sliderMove {
+        width: 400%;
+    }
+
+    .ventas .box img {
+        height: 240px;
+    }
+
+    /************ Footer ***************/
+    footer > div:last-child, footer input {
+        width: 100%;
+    }
+}
+
+@media (max-width: 780px) {
+    /********** Proyectos ***********/
+    .proyectos .box-flex img {
+        height: 200px;
+    }
+
+    .proyectos .box-flex > div {
+        width: 250px;
+    }
+    
+    /******** Ventas **********/
+    .ventas .box img {
+        height: 180px;
+    }
+
+    /************  Noticias ***********/
+    .noticias {
+        width: 95%;
+    }
+
+    /********* Options ************/
+    .options {
+        flex-direction: column;
+    }
+
+    /*************** Footer ************/
+    footer {
+        flex-direction: column;
+        gap: 40px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    footer p {
+        width: 100%;
+    }
+
+    /*********** Menu ***********/
+    header .menu {
+        width: 100%;
+    }
+}
+
+@media (max-width: 580px) {
+    /********* Proyectos **********/
+    .proyectos .box-flex > div {
+        width: 80%;
+    }
+
+    .proyectos .title {
+        width: 100%;
+        margin: 0;
+        margin-bottom: 30px;
+    }
+
+    /******** Ventas **********/
+    .ventas .title {
+        width: 100%;
+        margin: 0;
+        margin-bottom: 30px;
+    }
+
+    .ventas .sliderMove {
+        width: 800%;
+    }
+
+    /********** Noticias **********/
+    .noticias .box-flex > div {
+        flex: none;
+        width: 98%;
+    }
+}
+
 @media (max-width: 480px) {
+    /*********** Header ************/
     header {
         height: 80px;
     }
@@ -731,5 +837,58 @@ footer button {
     header .logo {
         width: 180px;
         height: 60px;
+    }
+
+    /************ Options ************/
+    .options {
+        margin-top: 80px;
+        padding: 30px;
+    }
+
+    /********* Proyectos **********/
+    .proyectos .box-flex > div {
+        width: 100%;
+    }
+
+    .proyectos {
+        padding-bottom: 0;
+    }
+
+    .proyectos .title {
+        width: 100%;
+        margin: 0;
+        margin-bottom: 30px;
+    }
+
+    /********** Ventas ***********/
+    .ventas .slider {
+        width: 100%;
+    }
+
+    .ventas button img {
+        width: 30px;
+    }
+
+    /************ Casas *************/
+    .casas .slider {
+        height: 400px;
+    }
+
+    .casas .box .text {
+        padding: 30px 10px;
+    }
+
+    .casas .text h2 {
+        font-size: 32px;
+    }
+
+    /************* Noticias ***********/
+    .noticias {
+        width: 90%;
+    }
+
+    /******** Footer *********/
+    footer {
+        font-size: 18px;
     }
 }

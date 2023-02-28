@@ -472,7 +472,63 @@ footer button {
     }
 }
 
+
+@media (max-width: 1000px) {
+    /************ Footer ***************/
+    footer > div:last-child, footer input {
+        width: 100%;
+    }
+
+    /******* Panel *******/
+    .panel a {
+        margin-top: 10px;
+    }
+
+    .panel {
+        width: 90%;
+    }
+}
+
+@media (max-width: 780px) {
+    /*************** Footer ************/
+    footer {
+        flex-direction: column;
+        gap: 40px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    footer p {
+        width: 100%;
+    }
+
+    /*********** Menu ***********/
+    header .menu {
+        width: 100%;
+    }
+
+    /*********** Panel ************/
+    .panel {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .panel , .panel.second {
+        flex-direction: column;
+    }
+
+    .panel img {
+        width: 100%;
+        height: 350px;
+    }
+
+    .panel p {
+        margin: 30px 0;
+    }
+}
+
 @media (max-width: 480px) {
+    /*********** Header ************/
     header {
         height: 80px;
     }
@@ -480,5 +536,33 @@ footer button {
     header .logo {
         width: 180px;
         height: 60px;
+    }
+
+    /******** Footer *********/
+    footer {
+        font-size: 18px;
+    }
+
+    /********* Content *********/
+    .content {
+        margin-top: 80px;
+        padding: 30px;
+    }
+    .content .box-flex {
+        width: 95%;
+    }
+
+    /************ Panel ************/
+    .panel h2 {
+        font-size: 26px;
+    }
+
+    .panel li {
+        margin-bottom: 15px;
+    }
+
+    .panel a {
+        margin: 20px 0;
+        float: left;
     }
 }

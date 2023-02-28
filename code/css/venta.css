@@ -565,7 +565,78 @@ footer button {
     }
 }
 
+@media (max-width: 1180px) {
+    /*********** Content ************/
+    .content .box-flex {
+        flex-direction: column;
+    }
+    .content .search {
+        display: none;
+    }
+}
+
+@media (max-width: 1000px) {
+    /************ Footer ***************/
+    footer > div:last-child, footer input {
+        width: 100%;
+    }
+}
+
+@media (max-width: 780px) {
+    /*************** Footer ************/
+    footer {
+        flex-direction: column;
+        gap: 40px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    footer p {
+        width: 100%;
+    }
+
+    /*********** Menu ***********/
+    header .menu {
+        width: 100%;
+    }
+
+    /*********** Content ************/
+    .content {
+        padding: 30px 0;
+    }
+
+    .content .box-flex {
+        width: 90%;
+    }
+
+    /*********** Results ***********/
+    .results .card {
+        flex-direction: column;
+    }
+    .results .cont-img img, .results .card .cont-img {
+        width: 100%;
+        height: 250px;
+    }
+    .results .card .cont-img {
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 580px) {
+    /********* Proyectos **********/
+    .proyectos .box-flex > div {
+        width: 80%;
+    }
+
+    .proyectos .title {
+        width: 100%;
+        margin: 0;
+        margin-bottom: 30px;
+    }
+}
+
 @media (max-width: 480px) {
+    /*********** Header ************/
     header {
         height: 80px;
     }
@@ -573,5 +644,18 @@ footer button {
     header .logo {
         width: 180px;
         height: 60px;
+    }
+
+    /******** Footer *********/
+    footer {
+        font-size: 18px;
+    }
+
+    /********* Content *********/
+    .content {
+        margin-top: 80px;
+    }
+    .content .box-flex {
+        width: 95%;
     }
 }
